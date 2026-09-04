@@ -28,18 +28,18 @@ export default function Contact() {
   }
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20">
       {/* Page header */}
-      <div className="bg-brand-navy py-20 text-center">
+      <div className="bg-brand-navy py-14 md:py-20 text-center px-4">
         <span className="text-brand-gold text-xs font-semibold tracking-widest uppercase">Reach Out</span>
-        <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mt-3">Contact Us</h1>
-        <p className="mt-4 text-gray-300 max-w-xl mx-auto px-4">
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3">Contact Us</h1>
+        <p className="mt-4 text-gray-300 max-w-xl mx-auto text-sm sm:text-base">
           Have a question or ready to get started? We'd love to hear from you.
         </p>
       </div>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14">
+      <section className="py-14 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-14">
 
           {/* Contact form */}
           <div>

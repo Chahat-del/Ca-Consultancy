@@ -82,44 +82,42 @@ const services = [
 export default function Services() {
   const { openModal } = useModal()
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20">
       {/* Page header */}
-      <div className="bg-brand-navy py-20 text-center">
+      <div className="bg-brand-navy py-14 md:py-20 text-center px-4">
         <span className="text-brand-gold text-xs font-semibold tracking-widest uppercase">What We Offer</span>
-        <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mt-3">Our Services</h1>
-        <p className="mt-4 text-gray-300 max-w-xl mx-auto px-4">
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3">Our Services</h1>
+        <p className="mt-4 text-gray-300 max-w-xl mx-auto text-sm sm:text-base">
           Comprehensive financial and compliance services — delivered with expertise and care.
         </p>
       </div>
 
       {/* Services list */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <section className="py-14 md:py-20 bg-white overflow-x-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 md:space-y-16">
           {services.map(({ id, icon, title, tagline, description, bullets }, idx) => (
             <div
               key={id}
               id={id}
-              className={`grid md:grid-cols-2 gap-10 items-start ${
-                idx % 2 !== 0 ? 'md:flex-row-reverse' : ''
-              }`}
+              className="grid md:grid-cols-2 gap-8 md:gap-10 items-start"
             >
               {/* Icon + heading block */}
               <div className={idx % 2 !== 0 ? 'md:order-2' : ''}>
-                <div className="text-5xl mb-4">{icon}</div>
+                <div className="text-4xl md:text-5xl mb-4">{icon}</div>
                 <h2 className="section-heading">{title}</h2>
-                <p className="text-brand-gold font-medium mt-1 text-sm uppercase tracking-wide">{tagline}</p>
-                <p className="mt-4 text-gray-600 leading-relaxed">{description}</p>
+                <p className="text-brand-gold font-medium mt-1 text-xs sm:text-sm uppercase tracking-wide">{tagline}</p>
+                <p className="mt-4 text-gray-600 leading-relaxed text-sm sm:text-base">{description}</p>
               </div>
 
               {/* Bullets */}
-              <div className={`bg-brand-light rounded-xl p-7 ${idx % 2 !== 0 ? 'md:order-1' : ''}`}>
-                <h3 className="font-semibold text-brand-navy text-sm uppercase tracking-wider mb-4">
+              <div className={`bg-brand-light rounded-xl p-5 sm:p-7 ${idx % 2 !== 0 ? 'md:order-1' : ''}`}>
+                <h3 className="font-semibold text-brand-navy text-xs sm:text-sm uppercase tracking-wider mb-4">
                   What's included
                 </h3>
                 <ul className="space-y-3">
                   {bullets.map((b) => (
                     <li key={b} className="flex items-start gap-3 text-sm text-gray-600">
-                      <span className="text-brand-gold mt-0.5 font-bold">→</span>
+                      <span className="text-brand-gold mt-0.5 font-bold flex-shrink-0">→</span>
                       {b}
                     </li>
                   ))}

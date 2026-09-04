@@ -4,17 +4,17 @@ export default function Intro() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center">
         {/* Left — visual accent */}
         <div className="relative">
-          <div className="bg-brand-light rounded-2xl p-10">
-            <div className="border-l-4 border-brand-gold pl-6">
-              <p className="font-serif text-xl text-brand-navy leading-relaxed italic">
+          <div className="bg-brand-light rounded-2xl p-7 sm:p-10">
+            <div className="border-l-4 border-brand-gold pl-5 sm:pl-6">
+              <p className="font-serif text-lg sm:text-xl text-brand-navy leading-relaxed italic">
                 "We don't just file returns — we build long-term financial strategies that allow our clients to grow with confidence."
               </p>
               <p className="mt-4 text-sm text-gray-500 font-medium">— Prasad &amp; Co, Founding Philosophy</p>
             </div>
           </div>
-          {/* Decorative element */}
-          <div className="absolute -top-4 -left-4 w-16 h-16 bg-brand-gold/10 rounded-full" />
-          <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-navy/5 rounded-full" />
+          {/* Decorative circles — hidden on mobile to avoid overflow */}
+          <div className="hidden sm:block absolute -top-4 -left-4 w-16 h-16 bg-brand-gold/10 rounded-full" />
+          <div className="hidden sm:block absolute -bottom-4 -right-4 w-24 h-24 bg-brand-navy/5 rounded-full" />
         </div>
 
         {/* Right — text */}

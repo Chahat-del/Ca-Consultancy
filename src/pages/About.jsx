@@ -45,12 +45,12 @@ const team = [
 export default function About() {
   const { openModal } = useModal()
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20">
       {/* Page header */}
-      <div className="bg-brand-navy py-20 text-center">
+      <div className="bg-brand-navy py-14 md:py-20 text-center px-4">
         <span className="text-brand-gold text-xs font-semibold tracking-widest uppercase">Our Story</span>
-        <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mt-3">About Prasad &amp; Co</h1>
-        <p className="mt-4 text-gray-300 max-w-xl mx-auto px-4">
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3">About Prasad &amp; Co</h1>
+        <p className="mt-4 text-gray-300 max-w-xl mx-auto text-sm sm:text-base">
           A trusted name in chartered accountancy — built on relationships, not just transactions.
         </p>
       </div>

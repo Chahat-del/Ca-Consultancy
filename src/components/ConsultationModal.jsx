@@ -57,11 +57,11 @@ export default function ConsultationModal({ isOpen, onClose }) {
       aria-labelledby="modal-title"
     >
       {/* Panel */}
-      <div className="relative bg-white rounded-2xl w-full max-w-md shadow-2xl animate-fadeIn">
+      <div className="relative bg-white rounded-2xl w-full max-w-md shadow-2xl animate-fadeIn max-h-[90vh] overflow-y-auto">
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+          className="sticky top-3 float-right mr-4 z-10 text-gray-400 hover:text-gray-600 transition-colors bg-white rounded-full p-1"
           aria-label="Close modal"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +69,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
           </svg>
         </button>
 
-        <div className="px-8 pt-8 pb-7">
+        <div className="px-5 sm:px-8 pt-5 sm:pt-8 pb-7 clear-both">
           {/* Heading */}
           <div className="text-center mb-7">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-navy mb-4">

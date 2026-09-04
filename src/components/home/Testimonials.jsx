@@ -28,11 +28,11 @@ export default function Testimonials() {
           <h2 className="section-heading mt-3 mx-auto">What Our Clients Say</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-7">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
           {testimonials.map(({ name, role, quote }) => (
             <div
               key={name}
-              className="bg-brand-light rounded-xl p-8 border border-gray-100 flex flex-col"
+              className="bg-brand-light rounded-xl p-6 md:p-8 border border-gray-100 flex flex-col"
             >
               {/* Stars */}
               <div className="flex gap-0.5 text-brand-gold text-sm mb-5">

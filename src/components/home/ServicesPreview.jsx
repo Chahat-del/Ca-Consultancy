@@ -42,11 +42,11 @@ export default function ServicesPreview() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {services.map(({ icon, title, desc }) => (
             <div
               key={title}
-              className="bg-white rounded-xl p-7 shadow-sm hover:shadow-md border border-transparent hover:border-brand-gold/30 transition-all duration-200 group"
+              className="bg-white rounded-xl p-5 md:p-7 shadow-sm hover:shadow-md border border-transparent hover:border-brand-gold/30 transition-all duration-200 group"
             >
               <div className="text-3xl mb-4">{icon}</div>
               <h3 className="font-serif font-bold text-brand-navy text-lg group-hover:text-brand-gold transition-colors">
