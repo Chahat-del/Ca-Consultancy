@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import { useModal } from '../../context/ModalContext'
 
 export default function Hero() {
+  const { openModal } = useModal()
   return (
     <section className="relative bg-brand-navy min-h-[92vh] flex items-center overflow-hidden pt-20">
       {/* Subtle background pattern */}
@@ -30,9 +32,9 @@ export default function Hero() {
             <Link to="/services" className="btn-primary">
               Explore Services
             </Link>
-            <Link to="/contact" className="btn-outline">
+            <button onClick={openModal} className="btn-outline">
               Talk to Us
-            </Link>
+            </button>
           </div>
         </div>
 

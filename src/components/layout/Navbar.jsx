@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { useModal } from '../../context/ModalContext'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -11,6 +12,7 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { openModal } = useModal()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -53,9 +55,9 @@ export default function Navbar() {
                 {label}
               </NavLink>
             ))}
-            <Link to="/contact" className="btn-primary text-sm py-2 px-5">
+            <button onClick={openModal} className="btn-primary text-sm py-2 px-5">
               Get in Touch
-            </Link>
+            </button>
           </nav>
 
           {/* Mobile hamburger */}
@@ -95,13 +97,12 @@ export default function Navbar() {
                 {label}
               </NavLink>
             ))}
-            <Link
-              to="/contact"
-              onClick={() => setOpen(false)}
+            <button
+              onClick={() => { setOpen(false); openModal() }}
               className="btn-primary text-sm text-center mt-1"
             >
               Get in Touch
-            </Link>
+            </button>
           </nav>
         )}
       </div>

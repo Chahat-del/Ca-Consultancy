@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useModal } from '../context/ModalContext'
 
 const values = [
   {
@@ -42,6 +43,7 @@ const team = [
 ]
 
 export default function About() {
+  const { openModal } = useModal()
   return (
     <div className="pt-20">
       {/* Page header */}
@@ -68,9 +70,9 @@ export default function About() {
             <p className="mt-4 text-gray-600 leading-relaxed">
               Over the years, we have developed deep expertise in income tax, GST, ROC compliance, and business advisory — making us a single point of contact for most financial and regulatory needs.
             </p>
-            <Link to="/contact" className="btn-primary inline-block mt-8 text-sm">
+            <button onClick={openModal} className="btn-primary inline-block mt-8 text-sm">
               Get in Touch
-            </Link>
+            </button>
           </div>
 
           {/* Values */}

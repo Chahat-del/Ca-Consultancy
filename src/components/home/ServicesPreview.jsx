@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useModal } from '../../context/ModalContext'
 
 const services = [
   {
@@ -29,6 +30,7 @@ const services = [
 ]
 
 export default function ServicesPreview() {
+  const { openModal } = useModal()
   return (
     <section className="py-20 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,9 +67,9 @@ export default function ServicesPreview() {
                 Every client situation is unique. Reach out and we'll craft a solution that fits.
               </p>
             </div>
-            <Link to="/contact" className="btn-primary mt-6 text-sm text-center">
+            <button onClick={openModal} className="btn-primary mt-6 text-sm text-center">
               Get in Touch →
-            </Link>
+            </button>
           </div>
         </div>
 

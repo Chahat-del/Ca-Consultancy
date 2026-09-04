@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useModal } from '../context/ModalContext'
 
 const services = [
   {
@@ -79,6 +80,7 @@ const services = [
 ]
 
 export default function Services() {
+  const { openModal } = useModal()
   return (
     <div className="pt-20">
       {/* Page header */}
@@ -135,9 +137,9 @@ export default function Services() {
           <p className="text-gray-300 mt-4">
             We're happy to have an initial conversation at no charge. Tell us about your situation and we'll recommend the right services.
           </p>
-          <Link to="/contact" className="btn-primary mt-8 inline-block">
+          <button onClick={openModal} className="btn-primary mt-8 inline-block">
             Talk to Our Team
-          </Link>
+          </button>
         </div>
       </section>
     </div>
