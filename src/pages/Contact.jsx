@@ -2,11 +2,13 @@ import { useState } from 'react'
 import { submitClientRequest } from '../lib/submitRequest'
 
 export default function Contact() {
-  const [status, setStatus] = useState('idle') // idle | submitting | success | error
+  const [status,   setStatus]   = useState('idle')
+  const [errorMsg, setErrorMsg] = useState('')
 
   async function handleSubmit(e) {
     e.preventDefault()
     setStatus('submitting')
+    setErrorMsg('')
     const fd = new FormData(e.target)
     const { error } = await submitClientRequest({
       name:    fd.get('name'),
@@ -15,7 +17,11 @@ export default function Contact() {
       service: fd.get('service'),
       message: fd.get('message'),
     })
-    if (error) { setStatus('error'); return }
+    if (error) {
+      setErrorMsg(error)
+      setStatus('error')
+      return
+    }
     setStatus('success')
     e.target.reset()
   }
@@ -114,7 +120,7 @@ export default function Contact() {
 
                 {status === 'error' && (
                   <p className="text-sm text-gray-600 border border-gray-200 rounded-lg px-4 py-3 bg-gray-50">
-                    Something went wrong. Please try again or email us directly.
+                    {errorMsg || 'Something went wrong. Please try again or email us directly.'}
                   </p>
                 )}
 

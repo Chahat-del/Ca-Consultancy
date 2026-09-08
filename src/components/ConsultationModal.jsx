@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { submitClientRequest } from '../lib/submitRequest'
 
 export default function ConsultationModal({ isOpen, onClose }) {
-  const [status, setStatus] = useState('idle') // idle | submitting | success | error
+  const [status,  setStatus]  = useState('idle') // idle | submitting | success | error
+  const [errorMsg, setErrorMsg] = useState('')
   const overlayRef   = useRef(null)
   const firstInputRef = useRef(null)
 
@@ -13,6 +14,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
     } else {
       document.body.style.overflow = ''
       setStatus('idle')
+      setErrorMsg('')
     }
     return () => { document.body.style.overflow = '' }
   }, [isOpen])
@@ -26,6 +28,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
   async function handleSubmit(e) {
     e.preventDefault()
     setStatus('submitting')
+    setErrorMsg('')
     const fd = new FormData(e.target)
     const { error } = await submitClientRequest({
       name:    fd.get('name'),
@@ -34,7 +37,11 @@ export default function ConsultationModal({ isOpen, onClose }) {
       service: fd.get('service'),
       message: fd.get('message'),
     })
-    if (error) { setStatus('error'); return }
+    if (error) {
+      setErrorMsg(error)
+      setStatus('error')
+      return
+    }
     setStatus('success')
     e.target.reset()
   }
@@ -83,7 +90,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
               <button onClick={onClose} className="btn-primary mt-6 text-sm px-8">Close</button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-3" noValidate>
+            <form onSubmit={handleSubmit} className="space-y-3">
               <input
                 ref={firstInputRef}
                 name="name" type="text" required
@@ -114,7 +121,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
 
               {status === 'error' && (
                 <p className="text-gray-600 text-xs text-center border border-gray-200 rounded-lg px-3 py-2 bg-gray-50">
-                  Something went wrong. Please try again or call us directly.
+                  {errorMsg || 'Something went wrong. Please try again or call us directly.'}
                 </p>
               )}
 
