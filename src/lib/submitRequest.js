@@ -21,7 +21,8 @@ export async function submitClientRequest({ name, email, phone, service, message
   if (!email?.trim())   return { error: 'Email is required.' }
   if (!message?.trim()) return { error: 'Message is required.' }
 
-  const { error } = await supabase
+  // Wrap in a 10-second timeout so the button never hangs forever
+  const insertPromise = supabase
     .from('client_requests')
     .insert({
       name:    name.trim(),
@@ -31,16 +32,26 @@ export async function submitClientRequest({ name, email, phone, service, message
       message: message.trim(),
     })
 
+  const timeoutPromise = new Promise((_, reject) =>
+    setTimeout(() => reject(new Error('Request timed out. Please check your connection and try again.')), 10000)
+  )
+
+  let error
+  try {
+    const result = await Promise.race([insertPromise, timeoutPromise])
+    error = result.error
+  } catch (err) {
+    error = err
+  }
+
   if (error) {
-    // Log full error details to browser console for debugging.
-    // In production this is only visible in DevTools — not shown to users.
     console.error('[submitClientRequest] Supabase error:', {
       message: error.message,
       code:    error.code,
       details: error.details,
       hint:    error.hint,
     })
-    return { error: error.message }
+    return { error: error.message || 'Something went wrong. Please try again.' }
   }
 
   return { error: null }
