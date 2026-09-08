@@ -20,8 +20,8 @@ export default function LatestUpdates() {
       })
   }, [])
 
-  // Nothing to show and still loading — render nothing so the section is invisible
-  if (!loading && updates.length === 0) return null
+  // Hide the section entirely while loading OR if there are no published updates
+  if (loading || updates.length === 0) return null
 
   return (
     <section className="py-16 md:py-20 bg-brand-light">
@@ -36,11 +36,7 @@ export default function LatestUpdates() {
           </p>
         </div>
 
-        {loading ? (
-          <div className="flex justify-center py-10">
-            <div className="w-8 h-8 border-4 border-brand-navy border-t-brand-gold rounded-full animate-spin" />
-          </div>
-        ) : (
+        {/* Updates list — only renders when updates exist */}
           <div className="space-y-4">
             {updates.map(u => (
               <div
@@ -106,7 +102,6 @@ export default function LatestUpdates() {
               </div>
             ))}
           </div>
-        )}
       </div>
     </section>
   )
