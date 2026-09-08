@@ -12,7 +12,7 @@ export default function Hero() {
   const { openModal } = useModal()
 
   return (
-    <section className="relative bg-brand-navy overflow-hidden pt-16 md:pt-20">
+    <section className="relative bg-brand-navy overflow-hidden pt-[100px] md:pt-[116px]">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 opacity-5 pointer-events-none"

@@ -82,7 +82,7 @@ const services = [
 export default function Services() {
   const { openModal } = useModal()
   return (
-    <div className="pt-16 md:pt-20">
+    <div className="pt-[100px] md:pt-[116px]">
       {/* Page header */}
       <div className="bg-brand-navy py-14 md:py-20 text-center px-4">
         <span className="text-brand-gold text-xs font-semibold tracking-widest uppercase">What We Offer</span>
