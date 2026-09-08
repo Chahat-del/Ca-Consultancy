@@ -100,10 +100,10 @@ export default function ConsultationModal({ isOpen, onClose }) {
               <select name="service" className="modal-input bg-white">
                 <option value="">Service (optional)</option>
                 <option>Accounting &amp; Bookkeeping</option>
-                <option>Income Tax Filing</option>
-                <option>GST Compliance</option>
-                <option>Audit Services</option>
-                <option>Business Advisory</option>
+                <option>Direct Tax</option>
+                <option>Indirect Tax</option>
+                <option>ROC Compliance</option>
+                <option>Audits</option>
                 <option>Other</option>
               </select>
               <textarea

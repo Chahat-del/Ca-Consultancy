@@ -208,16 +208,28 @@ export default function Enquiries() {
 
                     {/* Actions */}
                     <div className="mt-4 flex flex-wrap gap-2">
-                      <a
-                        href={`mailto:${e.email}?subject=Re: Your Enquiry — Prasad %26 Co`}
-                        className="inline-flex items-center gap-1.5 text-xs font-medium border border-brand-navy text-brand-navy rounded-lg px-4 py-2 hover:bg-brand-navy hover:text-white transition-colors"
-                      >
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        Reply via Email
-                      </a>
+                      {e.email ? (
+                        <a
+                          href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(e.email)}&su=${encodeURIComponent('Regarding your enquiry with Prasad & Co')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-medium border border-brand-navy text-brand-navy rounded-lg px-4 py-2 hover:bg-brand-navy hover:text-white transition-colors"
+                        >
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                          Reply via Gmail
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-medium border border-gray-200 text-gray-300 rounded-lg px-4 py-2 cursor-not-allowed">
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                          No email provided
+                        </span>
+                      )}
                       {e.phone && (
                         <a
                           href={`tel:${e.phone}`}

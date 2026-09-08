@@ -33,7 +33,7 @@ export default function Navbar() {
             <span className="w-9 h-9 rounded bg-brand-navy flex items-center justify-center text-brand-gold font-serif font-bold text-lg">P</span>
             <div className="leading-tight">
               <p className="font-serif font-bold text-brand-navy text-base">Prasad &amp; Co</p>
-              <p className="text-[10px] text-gray-500 tracking-widest uppercase">Chartered Accountants</p>
+              <p className="text-[10px] text-gray-500 tracking-widest uppercase">Accounting & Tax Consultancy</p>
             </div>
           </Link>
 

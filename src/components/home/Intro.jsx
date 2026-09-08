@@ -24,17 +24,17 @@ export default function Intro() {
             A Practice Built on Integrity &amp; Expertise
           </h2>
           <p className="mt-5 text-gray-600 leading-relaxed">
-            Prasad &amp; Co is a full-service chartered accountancy firm committed to delivering accurate, timely, and practical financial guidance. With deep expertise across taxation, compliance, and advisory services, we serve a diverse clientele — from start-ups and MSMEs to established corporates.
+            Prasad &amp; Co is a full-service accounting and tax consultancy committed to delivering accurate, timely, and practical financial guidance. With deep expertise across taxation, compliance, and accounting services, we serve a diverse clientele — from start-ups and MSMEs to established businesses.
           </p>
           <p className="mt-4 text-gray-600 leading-relaxed">
             Our approach is straightforward: understand the client's goals, navigate the regulatory landscape efficiently, and provide solutions that hold up under scrutiny.
           </p>
           <ul className="mt-6 space-y-2">
             {[
-              'ICAI registered &amp; fully compliant practice',
               'Dedicated team for each service domain',
               'Timely filings — no last-minute surprises',
               'Transparent fee structure',
+              'Serving individuals, MSMEs &amp; corporates',
             ].map((item) => (
               <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
                 <span className="text-brand-gold mt-0.5 text-base">✓</span>

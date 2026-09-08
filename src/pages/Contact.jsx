@@ -93,10 +93,10 @@ export default function Contact() {
                   >
                     <option value="">Select a service (optional)</option>
                     <option>Accounting &amp; Bookkeeping</option>
-                    <option>Income Tax Filing</option>
-                    <option>GST Compliance</option>
-                    <option>Audit Services</option>
-                    <option>Business Advisory</option>
+                    <option>Direct Tax</option>
+                    <option>Indirect Tax</option>
+                    <option>ROC Compliance</option>
+                    <option>Audits</option>
                     <option>Other</option>
                   </select>
                 </div>
@@ -137,37 +137,49 @@ export default function Contact() {
           {/* Contact info + map */}
           <div className="space-y-8">
             <div>
-              <h2 className="section-heading mb-6">Get in Touch</h2>
-              <ul className="space-y-5">
+              <h2 className="section-heading mb-6">Our Offices</h2>
+              <ul className="space-y-6">
+
+                {/* Bangalore */}
                 <li className="flex items-start gap-4">
-                  <span className="text-2xl mt-0.5">📍</span>
+                  <span className="text-2xl mt-0.5 flex-shrink-0">📍</span>
                   <div>
-                    <p className="font-semibold text-brand-navy text-sm">Office Address</p>
-                    <p className="text-gray-500 text-sm mt-0.5">
-                      [Street Address], [City], [State] – [PIN]<br />India
+                    <p className="font-semibold text-brand-navy text-sm">Bangalore Office</p>
+                    <p className="text-gray-500 text-sm mt-1 leading-relaxed">
+                      3rd Floor, Sri Skanda, 8th Main Road,<br />
+                      Govindaraja Nagar, Vijayanagar,<br />
+                      Bangalore – 560038
                     </p>
                   </div>
                 </li>
+
+                {/* Chilakaluripet */}
                 <li className="flex items-start gap-4">
-                  <span className="text-2xl mt-0.5">📞</span>
+                  <span className="text-2xl mt-0.5 flex-shrink-0">📍</span>
                   <div>
-                    <p className="font-semibold text-brand-navy text-sm">Phone</p>
-                    <a href="tel:+91XXXXXXXXXX" className="text-gray-500 text-sm hover:text-brand-gold transition-colors">
-                      +91 XXXXX XXXXX
-                    </a>
+                    <p className="font-semibold text-brand-navy text-sm">Chilakaluripet Office</p>
+                    <p className="text-gray-500 text-sm mt-1 leading-relaxed">
+                      1-169/13, Ground Floor, 2nd Line,<br />
+                      Polireddy Palem, Chilakaluripet,<br />
+                      Palnadu Dist – 522616
+                    </p>
                   </div>
                 </li>
+
+                {/* Email */}
                 <li className="flex items-start gap-4">
-                  <span className="text-2xl mt-0.5">✉️</span>
+                  <span className="text-2xl mt-0.5 flex-shrink-0">✉️</span>
                   <div>
                     <p className="font-semibold text-brand-navy text-sm">Email</p>
-                    <a href="mailto:info@prasadandco.in" className="text-gray-500 text-sm hover:text-brand-gold transition-colors">
+                    <a href="mailto:info@prasadandco.in" className="text-gray-500 text-sm hover:text-brand-gold transition-colors mt-0.5 block">
                       info@prasadandco.in
                     </a>
                   </div>
                 </li>
+
+                {/* Office hours */}
                 <li className="flex items-start gap-4">
-                  <span className="text-2xl mt-0.5">🕐</span>
+                  <span className="text-2xl mt-0.5 flex-shrink-0">🕐</span>
                   <div>
                     <p className="font-semibold text-brand-navy text-sm">Office Hours</p>
                     <p className="text-gray-500 text-sm mt-0.5">
@@ -180,16 +192,16 @@ export default function Contact() {
 
             <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
               <iframe
-                title="Office Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnNDAuNiJF!5e0!3m2!1sen!2sin!4v0"
-                width="100%" height="280"
+                title="Bangalore Office Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6!2d77.5350!3d12.9750!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e000000000%3A0x0!2sVijayanagar%2C%20Bengaluru%2C%20Karnataka%20560040!5e0!3m2!1sen!2sin!4v0"
+                width="100%" height="260"
                 style={{ border: 0 }}
                 allowFullScreen="" loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
             <p className="text-xs text-gray-400">
-              * Map shows a placeholder location. Update the embed URL once office address is confirmed.
+              * Map shows approximate Vijayanagar area, Bangalore. Share a Google Maps link to update the exact pin.
             </p>
           </div>
         </div>

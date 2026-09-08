@@ -26,19 +26,19 @@ const values = [
 
 const team = [
   {
-    name: 'CA [Name]',
+    name: '[Name]',
     role: 'Founding Partner',
-    bio: 'Over 15 years of experience in direct taxation, statutory audits, and corporate compliance. ICAI member.',
+    bio: 'Extensive experience in direct taxation, statutory audits, and corporate compliance.',
   },
   {
-    name: 'CA [Name]',
-    role: 'Partner – GST & Indirect Tax',
-    bio: 'Specialist in GST advisory, litigation support, and indirect tax planning for manufacturing and trading businesses.',
+    name: '[Name]',
+    role: 'Partner – Indirect Tax',
+    bio: 'Specialist in GST advisory, indirect tax planning for manufacturing and trading businesses.',
   },
   {
     name: '[Name]',
     role: 'Senior Accountant',
-    bio: 'Handles bookkeeping, MIS reporting, and payroll processing for a portfolio of 50+ clients across industries.',
+    bio: 'Handles bookkeeping, MIS reporting, and payroll processing for a portfolio of clients across industries.',
   },
 ]
 
@@ -51,7 +51,7 @@ export default function About() {
         <span className="text-brand-gold text-xs font-semibold tracking-widest uppercase">Our Story</span>
         <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3">About Prasad &amp; Co</h1>
         <p className="mt-4 text-gray-300 max-w-xl mx-auto text-sm sm:text-base">
-          A trusted name in chartered accountancy — built on relationships, not just transactions.
+          A trusted name in accounting &amp; tax consultancy — built on relationships, not just transactions.
         </p>
       </div>
 
@@ -62,13 +62,13 @@ export default function About() {
             <span className="text-brand-gold text-xs font-semibold tracking-widest uppercase">Background</span>
             <h2 className="section-heading mt-3">Our Practice</h2>
             <p className="mt-5 text-gray-600 leading-relaxed">
-              Prasad &amp; Co was established with a clear mission: deliver CA services that are thorough, timely, and genuinely useful to the client. Since our founding, we have grown from a small practice to a full-service firm handling diverse client needs — from individual tax returns to complex corporate audits.
+              Prasad &amp; Co was established with a clear mission: deliver accounting and tax services that are thorough, timely, and genuinely useful to the client. Since our founding, we have grown from a small practice to a full-service consultancy handling diverse client needs — from individual tax returns to complex compliance requirements.
             </p>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              We are a registered ICAI firm with a dedicated team of chartered accountants, semi-qualified staff, and support professionals. Our office-based and remote service model allows us to serve clients across geographies while maintaining close communication.
+              We have a dedicated team of accounting and tax professionals supported by experienced support staff. Our office-based and remote service model allows us to serve clients across geographies while maintaining close communication.
             </p>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              Over the years, we have developed deep expertise in income tax, GST, ROC compliance, and business advisory — making us a single point of contact for most financial and regulatory needs.
+              Over the years, we have developed deep expertise in direct tax, indirect tax, ROC compliance, and audits — making us a single point of contact for most accounting and regulatory needs.
             </p>
             <button onClick={openModal} className="btn-primary inline-block mt-8 text-sm">
               Get in Touch
@@ -101,7 +101,7 @@ export default function About() {
               <div key={name} className="bg-white rounded-xl p-7 shadow-sm">
                 {/* Avatar placeholder */}
                 <div className="w-14 h-14 rounded-full bg-brand-navy flex items-center justify-center text-brand-gold font-serif font-bold text-xl mb-4">
-                  {name.charAt(3)}
+                  P
                 </div>
                 <h3 className="font-serif font-bold text-brand-navy text-lg">{name}</h3>
                 <p className="text-brand-gold text-xs font-semibold uppercase tracking-wider mt-1">{role}</p>

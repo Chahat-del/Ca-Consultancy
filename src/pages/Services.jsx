@@ -11,70 +11,70 @@ const services = [
       'Accurate financial records are the foundation of every good business decision. We provide end-to-end bookkeeping, ledger maintenance, bank reconciliation, and MIS reporting — whether monthly, quarterly, or annually.',
     bullets: [
       'Tally / cloud accounting setup and management',
-      'Monthly/quarterly management accounts',
+      'Monthly / quarterly management accounts',
       'Bank and credit card reconciliation',
       'Payroll accounting and processing',
       'Year-end financial statement preparation',
     ],
   },
   {
-    id: 'tax',
+    id: 'direct-tax',
     icon: '📋',
-    title: 'Income Tax Filing',
+    title: 'Direct Tax',
     tagline: 'Timely. Accurate. Optimised.',
     description:
-      'We handle ITR filing for salaried individuals, freelancers, HUFs, firms, LLPs, and companies. Our tax planning approach ensures maximum legitimate deductions while keeping you compliant with the latest provisions.',
+      'We handle all direct tax compliance for salaried individuals, freelancers, HUFs, firms, LLPs, and companies. Our approach ensures maximum legitimate deductions while keeping you fully compliant with current provisions.',
     bullets: [
       'ITR filing — all forms (ITR-1 through ITR-6)',
       'Tax planning and advance tax computation',
       'TDS returns (24Q, 26Q, 27Q)',
-      'Income tax notices and scrutiny handling',
+      'Income tax notice handling and scrutiny support',
       'Capital gains calculation and tax optimisation',
     ],
   },
   {
-    id: 'gst',
+    id: 'indirect-tax',
     icon: '🧾',
-    title: 'GST Compliance',
+    title: 'Indirect Tax',
     tagline: 'Registration to reconciliation — fully covered.',
     description:
-      'GST can be complex, but non-compliance is costlier. We manage the entire lifecycle — from registration and returns to reconciliation and departmental representation — so you never have to worry about a GST notice.',
+      'GST and other indirect tax compliance can be complex, but non-compliance is costlier. We manage the entire lifecycle — from registration and returns to reconciliation and departmental representation.',
     bullets: [
       'GST registration (regular, composition, casual)',
-      'GSTR-1, 3B, 9, 9C filing',
+      'GSTR-1, GSTR-3B, GSTR-9 / 9C filing',
       'Input tax credit reconciliation',
       'E-way bill management',
-      'GST audit and departmental representation',
+      'GST departmental representation and advisory',
     ],
   },
   {
-    id: 'audit',
+    id: 'roc',
+    icon: '🏛️',
+    title: 'ROC Compliance',
+    tagline: 'Stay compliant with MCA requirements.',
+    description:
+      'Companies and LLPs registered under the Companies Act must meet regular filing obligations with the Registrar of Companies. We manage all MCA compliance so your company remains in good standing.',
+    bullets: [
+      'Company / LLP incorporation',
+      'Annual return and financial statement filing (AOC-4, MGT-7)',
+      'Director KYC and DIN-related filings',
+      'Statutory register maintenance',
+      'Changes in directors, registered office, or share capital',
+    ],
+  },
+  {
+    id: 'audits',
     icon: '🔍',
-    title: 'Audit Services',
+    title: 'Audits',
     tagline: 'Independent. Thorough. Credible.',
     description:
-      'Our audit practice covers statutory, internal, and tax audits conducted with rigour and professional independence. We help businesses identify weaknesses, ensure compliance, and build stakeholder confidence.',
+      'Our audit services cover statutory, internal, and tax audits conducted with rigour and professional independence. We help businesses identify process gaps, ensure compliance, and build stakeholder confidence.',
     bullets: [
-      'Statutory audit under Companies Act',
+      'Statutory audit under the Companies Act',
       'Tax audit (Section 44AB)',
       'Internal audit and process reviews',
       'Bank and stock audits',
-      'Audit under RERA and other specific statutes',
-    ],
-  },
-  {
-    id: 'advisory',
-    icon: '💼',
-    title: 'Business Advisory',
-    tagline: 'From incorporation to expansion.',
-    description:
-      'Beyond compliance, we help clients make better business decisions. Whether you\'re starting up, restructuring, or planning for succession, our advisory services provide the financial clarity to move forward.',
-    bullets: [
-      'Company / LLP / firm incorporation',
-      'Business structuring and restructuring',
-      'Project finance and CMA data preparation',
-      'Virtual CFO services',
-      'MSME registration and compliance',
+      'Concurrent and revenue audits',
     ],
   },
 ]
@@ -88,7 +88,7 @@ export default function Services() {
         <span className="text-brand-gold text-xs font-semibold tracking-widest uppercase">What We Offer</span>
         <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3">Our Services</h1>
         <p className="mt-4 text-gray-300 max-w-xl mx-auto text-sm sm:text-base">
-          Comprehensive financial and compliance services — delivered with expertise and care.
+          Comprehensive accounting, tax, and compliance services — delivered with expertise and care.
         </p>
       </div>
 
@@ -133,7 +133,7 @@ export default function Services() {
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="font-serif text-3xl font-bold text-white">Not sure what you need?</h2>
           <p className="text-gray-300 mt-4">
-            We're happy to have an initial conversation at no charge. Tell us about your situation and we'll recommend the right services.
+            We're happy to have an initial conversation. Tell us about your situation and we'll recommend the right services.
           </p>
           <button onClick={openModal} className="btn-primary mt-8 inline-block">
             Talk to Our Team

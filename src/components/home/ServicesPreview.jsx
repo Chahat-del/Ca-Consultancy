@@ -9,23 +9,23 @@ const services = [
   },
   {
     icon: '📋',
-    title: 'Tax Filing',
-    desc: 'ITR filing for individuals, firms, and companies — on time, every time, with maximum legitimate savings.',
+    title: 'Direct Tax',
+    desc: 'ITR filing, TDS compliance, advance tax computation, and tax planning for individuals and businesses.',
   },
   {
     icon: '🧾',
-    title: 'GST Compliance',
+    title: 'Indirect Tax',
     desc: 'GST registration, return filing, reconciliation, and advisory to keep your business fully compliant.',
   },
   {
-    icon: '🔍',
-    title: 'Audit Services',
-    desc: 'Statutory, internal, and tax audits conducted with thoroughness and professional independence.',
+    icon: '🏛️',
+    title: 'ROC Compliance',
+    desc: 'Company incorporation, annual filings, statutory registers, and MCA compliance handled end-to-end.',
   },
   {
-    icon: '💼',
-    title: 'Business Advisory',
-    desc: 'Company incorporation, MIS reporting, financial planning, and strategic guidance for growth.',
+    icon: '🔍',
+    title: 'Audits',
+    desc: 'Statutory, internal, and tax audits conducted with thoroughness and professional independence.',
   },
 ]
 
@@ -38,7 +38,7 @@ export default function ServicesPreview() {
           <span className="text-brand-gold text-xs font-semibold tracking-widest uppercase">What We Do</span>
           <h2 className="section-heading mt-3 mx-auto">Our Core Services</h2>
           <p className="section-subheading mx-auto text-center mt-3">
-            End-to-end financial and compliance services tailored to your needs.
+            End-to-end accounting, tax, and compliance services tailored to your needs.
           </p>
         </div>
 

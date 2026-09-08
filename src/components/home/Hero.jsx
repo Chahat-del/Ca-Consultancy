@@ -27,14 +27,14 @@ export default function Hero() {
         {/* Text */}
         <div>
           <span className="inline-block text-brand-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-            Chartered Accountants
+            Accounting &amp; Tax Consultancy
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
             Financial Clarity,<br />
             <span className="text-brand-gold">Built on Trust.</span>
           </h1>
           <p className="mt-5 text-gray-300 text-base sm:text-lg leading-relaxed max-w-lg">
-            Prasad &amp; Co provides expert accounting, taxation, GST, audit, and business advisory services — helping individuals and businesses make confident financial decisions.
+            Prasad &amp; Co provides expert accounting, bookkeeping, direct &amp; indirect tax, ROC compliance, and audit services — helping individuals and businesses stay compliant and make confident financial decisions.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/services" className="btn-primary text-sm sm:text-base">
