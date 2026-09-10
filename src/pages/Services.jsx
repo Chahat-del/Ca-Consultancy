@@ -77,6 +77,23 @@ const services = [
       'Concurrent and revenue audits',
     ],
   },
+  {
+    id: 'other',
+    icon: '🗂️',
+    title: 'Other Services',
+    tagline: 'Registrations, licences & compliance made easy.',
+    description:
+      'Beyond tax and accounting, we assist businesses and individuals with a range of essential registrations, licences, and compliance filings — handled efficiently so you can focus on running your business.',
+    bullets: [
+      'Professional Tax registration & returns',
+      'PF and ESI returns',
+      'Food License (FSSAI)',
+      'MSME / Udyam Registration',
+      'Digital Signature Certificate (DSC)',
+      'PAN / TAN application',
+      'Trade License',
+    ],
+  },
 ]
 
 export default function Services() {

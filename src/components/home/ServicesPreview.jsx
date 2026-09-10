@@ -27,6 +27,11 @@ const services = [
     title: 'Audits',
     desc: 'Statutory, internal, and tax audits conducted with thoroughness and professional independence.',
   },
+  {
+    icon: '🗂️',
+    title: 'Other Services',
+    desc: 'Professional Tax, PF & ESI, Food License, MSME/Udyam Registration, DSC, PAN/TAN, Trade License and more.',
+  },
 ]
 
 export default function ServicesPreview() {
