@@ -81,9 +81,9 @@ const services = [
     id: 'other',
     icon: '🗂️',
     title: 'Other Services',
-    tagline: 'Registrations, licences & compliance made easy.',
+    tagline: 'Registrations, licences & more.',
     description:
-      'Beyond tax and accounting, we assist businesses and individuals with a range of essential registrations, licences, and compliance filings — handled efficiently so you can focus on running your business.',
+      'Beyond core accounting and tax work, we assist individuals and businesses with a range of registrations, licences, and compliance filings that are often needed at various stages of business setup and operations.',
     bullets: [
       'Professional Tax registration & returns',
       'PF and ESI returns',

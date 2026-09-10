@@ -30,7 +30,7 @@ const services = [
   {
     icon: '🗂️',
     title: 'Other Services',
-    desc: 'Professional Tax, PF & ESI, Food License, MSME/Udyam Registration, DSC, PAN/TAN, Trade License and more.',
+    desc: 'Professional Tax, PF/ESI returns, FSSAI, MSME/Udyam, DSC, PAN/TAN, Trade License and more.',
   },
 ]
 

@@ -89,12 +89,10 @@ export default function About() {
           <div className="text-center mb-14">
             <span className="text-brand-gold text-xs font-semibold tracking-widest uppercase">The People</span>
             <h2 className="section-heading mt-3">Our Team</h2>
-            <p className="text-gray-500 mt-3 text-sm">Real names and bios will be updated once client shares details.</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div className="flex flex-wrap justify-center gap-7">
             {team.map(({ name, role, bio }) => (
-              <div key={name} className="bg-white rounded-xl p-7 shadow-sm">
-                {/* Avatar placeholder */}
+              <div key={name} className="bg-white rounded-xl p-7 shadow-sm w-full sm:w-72">
                 <div className="w-14 h-14 rounded-full bg-brand-navy flex items-center justify-center text-brand-gold font-serif font-bold text-xl mb-4">
                   {name.charAt(0)}
                 </div>
