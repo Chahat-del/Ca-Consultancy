@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import { useModal } from '../../context/ModalContext'
 
 const stats = [
-  { value: '15+', label: 'Years of Experience' },
-  { value: '500+', label: 'Clients Served' },
-  { value: '5', label: 'Practice Areas' },
+  { value: '10+',  label: 'Years of Experience' },
+  { value: '250+', label: 'Clients Served' },
+  { value: '5',    label: 'Practice Areas' },
   { value: '100%', label: 'Compliance Focused' },
 ]
 

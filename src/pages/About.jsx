@@ -26,17 +26,12 @@ const values = [
 
 const team = [
   {
-    name: '[Name]',
-    role: 'Founding Partner',
+    name: 'Prasad Pattamsetty',
+    role: 'Proprietor',
     bio: 'Extensive experience in direct taxation, statutory audits, and corporate compliance.',
   },
   {
-    name: '[Name]',
-    role: 'Partner – Indirect Tax',
-    bio: 'Specialist in GST advisory, indirect tax planning for manufacturing and trading businesses.',
-  },
-  {
-    name: '[Name]',
+    name: 'Kiran K',
     role: 'Senior Accountant',
     bio: 'Handles bookkeeping, MIS reporting, and payroll processing for a portfolio of clients across industries.',
   },
@@ -101,7 +96,7 @@ export default function About() {
               <div key={name} className="bg-white rounded-xl p-7 shadow-sm">
                 {/* Avatar placeholder */}
                 <div className="w-14 h-14 rounded-full bg-brand-navy flex items-center justify-center text-brand-gold font-serif font-bold text-xl mb-4">
-                  P
+                  {name.charAt(0)}
                 </div>
                 <h3 className="font-serif font-bold text-brand-navy text-lg">{name}</h3>
                 <p className="text-brand-gold text-xs font-semibold uppercase tracking-wider mt-1">{role}</p>
