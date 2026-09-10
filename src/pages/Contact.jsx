@@ -183,6 +183,17 @@ export default function Contact() {
                   </div>
                 </li>
 
+                {/* Phone */}
+                <li className="flex items-start gap-4">
+                  <span className="text-2xl mt-0.5 flex-shrink-0">📞</span>
+                  <div>
+                    <p className="font-semibold text-brand-navy text-sm">Phone</p>
+                    <a href="tel:+918790273040" className="text-gray-500 text-sm hover:text-brand-gold transition-colors mt-0.5 block">
+                      +91 87902 73040
+                    </a>
+                  </div>
+                </li>
+
                 {/* Office hours */}
                 <li className="flex items-start gap-4">
                   <span className="text-2xl mt-0.5 flex-shrink-0">🕐</span>

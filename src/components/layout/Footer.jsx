@@ -59,6 +59,12 @@ export default function Footer() {
                 info@prasadandco.in
               </a>
             </li>
+            <li className="flex items-center gap-2">
+              <span>📞</span>
+              <a href="tel:+918790273040" className="hover:text-brand-gold transition-colors">
+                +91 87902 73040
+              </a>
+            </li>
           </ul>
         </div>
       </div>
