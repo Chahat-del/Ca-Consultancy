@@ -14,18 +14,24 @@ const COMPLIANCE = [
   { day: 20, label: 'Professional Tax Filing',             months: 'all' },
 
   // TDS Quarterly Return
-  { day: 31, label: 'Q1 TDS Quarterly Return',            months: [6]  },  // July
-  { day: 31, label: 'Q2 TDS Quarterly Return',            months: [9]  },  // October
-  { day: 31, label: 'Q3 TDS Quarterly Return',            months: [0]  },  // January
-  { day: 31, label: 'Q4 TDS Quarterly Return',            months: [4]  },  // May
+  { day: 31, label: 'Q1 TDS Quarterly Return',                         months: [6]  },  // July
+  { day: 31, label: 'Q2 TDS Quarterly Return',                         months: [9]  },  // October
+  { day: 31, label: 'Q3 TDS Quarterly Return',                         months: [0]  },  // January
+  { day: 31, label: 'Q4 TDS Quarterly Return',                         months: [4]  },  // May
 
   // Advance Tax Instalments
-  { day: 15, label: 'Advance Tax – 1st Instalment',       months: [5]  },  // June
-  { day: 15, label: 'Advance Tax – 2nd Instalment',       months: [8]  },  // September
-  { day: 15, label: 'Advance Tax – 3rd Instalment',       months: [11] },  // December
-  { day: 15, label: 'Advance Tax – 4th Instalment',       months: [2]  },  // March
-]
+  { day: 15, label: 'Advance Tax – 1st Instalment',                    months: [5]  },  // June
+  { day: 15, label: 'Advance Tax – 2nd Instalment',                    months: [8]  },  // September
+  { day: 15, label: 'Advance Tax – 3rd Instalment',                    months: [11] },  // December
+  { day: 15, label: 'Advance Tax – 4th Instalment',                    months: [2]  },  // March
 
+  // ITR Annual Deadlines
+  { day: 31, label: 'ITR Filing – Salaried & Non-Audit (ITR-1, ITR-2)',months: [6]  },  // 31 July
+  { day: 31, label: 'ITR Filing – Business Income (ITR-3, ITR-4)',     months: [7]  },  // 31 Aug
+  { day: 30, label: 'Tax Audit Report due',                            months: [8]  },  // 30 Sep
+  { day: 31, label: 'ITR Filing – Companies & Audit Cases',            months: [9]  },  // 31 Oct
+  { day: 30, label: 'ITR Filing – Transfer Pricing u/s 92E',           months: [10] },  // 30 Nov
+]
 // Build a map: day → [label, …] for a given year/month
 function getEventsForMonth(year, month) {
   const map = {} // key = day number
