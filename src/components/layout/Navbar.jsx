@@ -4,8 +4,8 @@ import { useModal } from '../../context/ModalContext'
 
 const links = [
   { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
+  { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
 
