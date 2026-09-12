@@ -70,7 +70,8 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 text-center text-xs text-gray-500 py-5">
-        © {new Date().getFullYear()} Prasad &amp; Co. All rights reserved.
+        <p>© {new Date().getFullYear()} Prasad &amp; Co. All rights reserved.</p>
+        <p className="mt-1 text-gray-600">Developed by MG Solutions</p>
       </div>
     </footer>
   )
